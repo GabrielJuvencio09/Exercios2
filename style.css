@@ -1,17 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
-:root{
+:root {
     --preto: #000;
     --branco: #fff;
     --cinza-fundo: #dad9d9;
     --cinza-texto: #c6c6c6;
     --vermelho: #ee2211;
     --vermelho-escuro: #900;
-    --cinza:#f7f7f7;
+    --cinza: #f7f7f7;
+}
+
+li {
+    list-style: none;
 }
 
 img {
@@ -19,32 +24,36 @@ img {
     display: block;
 }
 
-body{
-    
+.imagen {
+    width: 400px;
+}
+
+body {
+    font-size: 1.2rem;
     background-color: var(--cinza-fundo);
     display: grid;
     text-align: center;
 }
 
-Header{
+Header {
     margin-top: 5rem;
-   display: grid;
-   grid-template-rows: 5rem 7rem;
-   align-items: center;
-   
+    display: grid;
+    grid-template-rows: 5rem 7rem;
+    align-items: center;
+
 }
 
-header div{
+header div {
     display: flex;
-    justify-content: center; 
-    
+    justify-content: center;
+
 }
 
-.Menu{
+.Menu {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    
+
 }
 
 .Menus {
@@ -53,31 +62,38 @@ header div{
     text-decoration: none;
     padding: 1rem 1.5rem;
     border-radius: 2rem;
+    transition: border 0.1s ease;
 }
 
-.Menus:hover{
+.Menus:hover {
     border: 0.15rem solid var(--vermelho);
 }
 
-.Menus:active{
+.Menus:active {
     color: var(--vermelho);
     background: var(--cinza);
 }
 
-.conteudo{
-    margin: 2rem;
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-}
-
-.conteudo-principal{
+.conteudo {
+    margin: 0 25rem;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
 }
 
-.principal{
+.conteudo-principal,
+.conteudo-secundario{
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+}
+
+.principal {
+
     background-color: var(--branco);
     position: relative;
-    padding: 2rem 0.5rem 2rem 2rem;
+    padding: 0rem 1rem 0rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -85,15 +101,88 @@ header div{
     gap: 2rem;
 }
 
-.principal::before{
-    position: inherit;
-    top: -19rem;
-    left: 3rem;
+.principal::before {
+    position: absolute;
+    top: 0.5rem;
+    right: -2rem;
     content: '';
-    display: inline-block;
+    display: block;
     width: 4rem;
     height: .2rem;
     background-color: var(--vermelho);
 
 }
 
+.principal h1{
+    font-size: 1.5rem;
+}
+
+.principal p {
+    font-size: 1rem;
+    text-align: right;
+}
+
+.vermais {
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--vermelho);
+    padding: 15px 30px;
+
+}
+
+.vermais:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+.Vantagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--cinza-texto);
+    background-image: url(./img/onda.svg);
+
+}
+
+.conteudo-Vantagens {
+    font-size: 1rem;
+    text-align: left;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--branco);
+}
+
+.conteudo-Vantagen {
+    display: grid;
+    gap: 1rem 2rem;
+
+}
+
+.lista {
+    display: grid;
+    gap: 0.5rem 1rem;
+    padding: 1rem;
+}
+
+.lista p {
+    display: grid;
+    grid-column: 2/2;
+
+}
+
+.lista:nth-child(odd) {
+    background-color: var(--cinza);
+}
+
+.lista:hover {
+    border-left: 0.2rem solid var(--vermelho);
+
+}
+
+.creditos {
+    margin-top: 5rem;
+    background-color: var(--branco);
+}
